@@ -1,7 +1,7 @@
 .App {
   margin: 0 auto;
   max-width: 650px;
-  padding: 3px;
+  padding: 1px;
 }
 
 h1 {
@@ -18,10 +18,12 @@ hr {
 }
 
 input[type="text"] {
-  width: calc(100% - 20px);
-  padding: 8px;
+  width: calc(100% - 64px);
+  padding: 12px;
   margin-bottom: 12px;
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button {
@@ -74,10 +76,12 @@ li.completed {
 
 @media only screen and (max-width: 600px) {
   input[type="text"] {
-    width: calc(100% - 16px);
+    width: calc(100% - 32px); /* Adjust the width as needed */
   }
 
+  /* Adjust button styles for mobile view */
   button {
-    margin-right: 5px;
+    width: auto; /* Let the width adjust based on content */
+    margin-right: 5px; /* Reduce margin between buttons */
   }
 }
