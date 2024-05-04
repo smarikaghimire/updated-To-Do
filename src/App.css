@@ -8,7 +8,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 38px;
+  font-size: 35px;
 }
 hr {
   position: absolute;
@@ -79,9 +79,8 @@ li.completed {
     width: calc(100% - 32px); /* Adjust the width as needed */
   }
 
-  /* Adjust button styles for mobile view */
   button {
-    width: auto; /* Let the width adjust based on content */
-    margin-right: 5px; /* Reduce margin between buttons */
+    width: auto;
+    margin-right: 5px;
   }
 }

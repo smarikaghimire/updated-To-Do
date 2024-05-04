@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 
 const Todo = ({ todo, onToggle, onDelete, index }) => {
-  const [deleted, setDeleted] = useState(false);
+  const [isToggledForDeletion, setIsToggledForDeletion] = useState(false);
 
   const handleToggle = () => {
     onToggle(todo.id);
-    setDeleted(true); // Set deleted state to true when toggling
+    setIsToggledForDeletion(true);
+
     setTimeout(() => {
-      onDelete(todo.id); // Delete the todo item after 2 seconds
+      onDelete(todo.id);
     }, 2000);
   };
-
-  if (deleted) {
-    return null; // Return null to hide the todo item when deleted
-  }
 
   return (
     <li className={todo.completed ? "completed" : ""}>
       <input type="checkbox" checked={todo.completed} onChange={handleToggle} />
       <span className="todo-number">{index + 1}.&nbsp; </span>
-      <span className="todo-text">{todo.text}</span>
+      <span className={`todo-text ${isToggledForDeletion ? "crossed" : ""}`}>
+        {todo.text}
+      </span>
     </li>
   );
 };
