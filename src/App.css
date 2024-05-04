@@ -1,0 +1,83 @@
+.App {
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 3px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 38px;
+}
+hr {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 98%;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 12px;
+  margin-top: 40px;
+}
+
+button {
+  padding: 6px 10px;
+  background-color: #efefef;
+  width: 16%;
+  height: 28px;
+  margin-top: 8.5px;
+  margin-right: 27px;
+  color: rgb(0, 0, 0);
+  border: 0.5px solid;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #d6d5d5;
+}
+
+ul {
+  list-style-type: none;
+  padding: 25px 0;
+}
+
+li {
+  margin-bottom: 8px;
+  display: flex;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  padding: 3px;
+  font-size: 14px;
+}
+
+li input[type="checkbox"] {
+  margin-right: 17px;
+  transform: scale(1.5);
+}
+
+.todo-number {
+  font-size: 1.2em;
+}
+
+.todo-text {
+  font-size: 1.2em;
+}
+
+li.completed {
+  text-decoration: line-through;
+}
+
+@media only screen and (max-width: 600px) {
+  input[type="text"] {
+    width: calc(100% - 16px);
+  }
+
+  button {
+    margin-right: 5px;
+  }
+}
